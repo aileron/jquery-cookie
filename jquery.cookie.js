@@ -1,17 +1,17 @@
 /**
- * jQuery Cookie plugin
+ * Cookie Function
  *
- * Copyright (c) 2010 Klaus Hartl (stilbuero.de)
+ * Copyright (c) 2011 aileron (aileron.cc)
  * Dual licensed under the MIT and GPL licenses:
  * http://www.opensource.org/licenses/mit-license.php
  * http://www.gnu.org/licenses/gpl.html
  *
  */
-jQuery.cookie = function (key, value, options) {
+$cookie = function (key, value, options) {
 
     // key and at least value given, set cookie...
     if (arguments.length > 1 && String(value) !== "[object Object]") {
-        options = jQuery.extend({}, options);
+        options = options || {};
 
         if (value === null || value === undefined) {
             options.expires = -1;
